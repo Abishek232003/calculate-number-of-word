@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Word Length</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>Type a Sentence</h2>
+        <div class="inputdiv">
+            <!-- <input type="text" id="input" placeholder="length in cm"> -->
+            <textarea name="" id="input" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <button type="submit" onclick="count()">Calculate</button>
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+    <script>
+      function count(){
+        const cmVal = (document.getElementById("input").value).split(" ")
+        const result = document.getElementById("result")
+        result.innerHTML = cmVal.length + " Words"
+      }
+    </script>
+</body>
+</html>
